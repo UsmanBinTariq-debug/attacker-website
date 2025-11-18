@@ -1,0 +1,31 @@
+HACKTIVIST ATTACKER: Narration Script (2-3 minutes)
+=====================================================
+
+[OPENING]
+"Meet the Hacktivist—a digital activist driven by conviction, not profit. They believe traditional systems are broken, and they've taken justice into their own hands through code.
+
+[THE STORY]
+This particular attack began when a major environmental corporation was exposed, internally, for ignoring a critical pollution report. For years, they hid the damage—poisoning communities while maintaining a green facade. Our hacktivist collective researched for weeks, identifying employees and crafting phishing emails. One worker clicked. Access granted.
+
+Inside the network, they gathered evidence: internal emails admitting wrongdoing, financial records showing they paid regulatory fines without fixing the problem. Then came the climax—a coordinated DDoS attack that took down the corporation's website for six hours, replacing the homepage with a defacement manifesto listing specific demands: transparency, investigation, public apology, and real change within 90 days.
+
+The leaked documents went viral. Within days, mainstream news picked it up. The public was outraged. The board faced lawsuits. Regulators launched an official investigation.
+
+[KEY INDICATORS OF HACKTIVISM]
+Notice the pattern: A moral conviction, not monetary gain. A publicly stated cause. Data leaks paired with a message. Website defacement as a digital sit-in. The attack is loud, meant to be seen. They WANT credit because they believe their cause is just.
+
+[CLOSING]
+This isn't espionage or theft for profit—it's activism gone digital. Dangerous? Yes. Illegal? Absolutely. But from their perspective, they're whistleblowers and freedom fighters. That mindset makes hacktivists unpredictable and persistent."
+
+---
+
+**One-Line Declaration:**
+Our attacker type is: HACKTIVIST
+
+---
+
+**Word Count:** 198 words
+**Attacker Motive:** Moral/Political conviction, expose wrongdoing
+**Key Tactics:** Phishing, data exfiltration, DDoS, website defacement
+**Target Type:** Corporations/governments perceived as corrupt
+**Impact:** Reputation damage, operational disruption, public awareness, legal consequences

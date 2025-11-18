@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation DarkVault - Cybercriminal Ransomware Attack</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #00ff41;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+        }
+        
+        header {
+            background: #ff0000;
+            color: #000;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 3px solid #00ff41;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: glitch 1s infinite;
+        }
+        
+        @keyframes glitch {
+            0%, 100% { text-shadow: 2px 2px #ff0000, -2px -2px #00ff41; }
+            50% { text-shadow: -2px -2px #ff0000, 2px 2px #00ff41; }
+        }
+        
+        .skull {
+            font-size: 3em;
+            margin: 10px 0;
+        }
+        
+        .section {
+            padding: 30px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .section h2 {
+            color: #ff0000;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            text-transform: uppercase;
+            border-bottom: 2px solid #00ff41;
+            padding-bottom: 10px;
+        }
+        
+        .attacker-profile {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .profile-card {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .profile-card h3 {
+            color: #ff0000;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .artifact {
+            background: #0a0a0a;
+            border: 2px solid #00ff41;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+        }
+        
+        .artifact h3 {
+            color: #ff0000;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        
+        .ransom-note {
+            background: #000;
+            color: #ff0000;
+            padding: 30px;
+            border: 3px solid #ff0000;
+            font-size: 1.1em;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 10px #ff0000; }
+            50% { box-shadow: 0 0 25px #ff0000; }
+        }
+        
+        .bitcoin-address {
+            background: #ffcc00;
+            color: #000;
+            padding: 10px;
+            margin: 15px 0;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid #000;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+            padding-left: 40px;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #ff0000;
+            font-size: 1.5em;
+        }
+        
+        .timeline-content {
+            background: rgba(255, 0, 0, 0.1);
+            padding: 15px;
+            border-left: 3px solid #ff0000;
+            width: 100%;
+        }
+        
+        .timeline-content h4 {
+            color: #ff0000;
+            margin-bottom: 8px;
+        }
+        
+        .phishing-email {
+            background: #fff;
+            color: #000;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .email-header {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .email-field {
+            margin: 5px 0;
+        }
+        
+        .defenses {
+            background: rgba(0, 255, 65, 0.1);
+            border: 2px solid #00ff41;
+            padding: 30px;
+            border-radius: 5px;
+        }
+        
+        .defenses h2 {
+            color: #00ff41;
+            border-bottom-color: #00ff41;
+        }
+        
+        .defense-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .defense-list li {
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(0, 255, 65, 0.05);
+            border-left: 4px solid #00ff41;
+        }
+        
+        .defense-list li strong {
+            color: #00ff41;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-box {
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid #ff0000;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            color: #ff0000;
+            font-weight: bold;
+        }
+        
+        .blink {
+            animation: blink 1.5s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="skull">☠️</div>
+            <h1>OPERATION DARKVAULT</h1>
+            <p style="font-size: 1.2em; margin-top: 10px;">CYBERCRIMINAL RANSOMWARE ATTACK</p>
+            <p style="color: #000; margin-top: 10px; font-weight: bold;">Your Files Have Been Encrypted</p>
+        </header>
+
+        <div class="section">
+            <h2>🎯 Attacker Profile: CYBERCRIMINALS</h2>
+            <div class="attacker-profile">
+                <div class="profile-card">
+                    <h3>💰 MOTIVE</h3>
+                    <p><strong>Pure Financial Gain</strong></p>
+                    <p>Extract maximum cryptocurrency payment through file encryption and data exfiltration threats. Target: $500,000 in Bitcoin.</p>
+                </div>
+                <div class="profile-card">
+                    <h3>🔧 TACTICS</h3>
+                    <p><strong>Ransomware-as-a-Service (RaaS)</strong></p>
+                    <p>Spear-phishing emails, credential harvesting, lateral movement, double extortion (encryption + data leak threat).</p>
+                </div>
+                <div class="profile-card">
+                    <h3>🏢 TARGET</h3>
+                    <p><strong>MediCare Regional Hospital</strong></p>
+                    <p>Healthcare provider with 5,000 patient records, critical systems, and high pressure to pay quickly.</p>
+                </div>
+                <div class="profile-card">
+                    <h3>💥 IMPACT</h3>
+                    <p><strong>Operations Paralyzed</strong></p>
+                    <p>All patient records encrypted, surgery schedules halted, $2M revenue loss, 30-day recovery, reputational damage.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📧 Artifact 1: Initial Phishing Email</h2>
+            <div class="artifact">
+                <div class="phishing-email">
+                    <div class="email-header">
+                        <div class="email-field"><strong>From:</strong> security@medicareupdate-portal.com</div>
+                        <div class="email-field"><strong>To:</strong> billing-dept@medicarehospital.com</div>
+                        <div class="email-field"><strong>Subject:</strong> URGENT: Security Update Required - Action Needed Within 24 Hours</div>
+                        <div class="email-field"><strong>Date:</strong> October 15, 2024, 9:42 AM</div>
+                    </div>
+                    <p style="margin-bottom: 15px;">Dear MediCare Staff Member,</p>
+                    <p style="margin-bottom: 15px;">Our security team has detected unusual login attempts on your account. To protect patient data and comply with HIPAA regulations, you must verify your credentials immediately.</p>
+                    <p style="margin-bottom: 15px;"><strong style="color: #ff0000;">Action Required:</strong> Click the link below to verify your identity and update your security settings:</p>
+                    <p style="background: #ffff00; padding: 10px; text-align: center; margin: 15px 0;">
+                        <a href="#" style="color: #0000ff; text-decoration: underline;">https://medicare-security-verify.com/update</a>
+                    </p>
+                    <p style="margin-bottom: 10px; color: #ff0000; font-weight: bold;">Warning: Failure to verify within 24 hours will result in account suspension.</p>
+                    <p style="margin-top: 20px;">Best regards,<br>MediCare IT Security Team</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💀 Artifact 2: Ransom Note</h2>
+            <div class="artifact">
+                <div class="ransom-note">
+                    <h3 class="blink">⚠️ YOUR NETWORK HAS BEEN BREACHED ⚠️</h3>
+                    <p style="margin: 20px 0; font-size: 1.2em;">All your files have been ENCRYPTED with military-grade cryptography.</p>
+                    <p style="margin: 20px 0;">We have also EXFILTRATED 5,000+ patient records including:</p>
+                    <ul style="list-style: none; margin: 20px 0; text-align: left; display: inline-block;">
+                        <li>✓ Social Security Numbers</li>
+                        <li>✓ Medical Histories</li>
+                        <li>✓ Insurance Information</li>
+                        <li>✓ Financial Records</li>
+                    </ul>
+                    <p style="margin: 20px 0; font-size: 1.3em;"><strong>RANSOM DEMAND: $500,000 USD</strong></p>
+                    <div class="bitcoin-address">
+                        BITCOIN ADDRESS: 1DarkVault9XyZ4aBcD3FgH7jK8mN9pQrS2
+                    </div>
+                    <p style="margin: 20px 0;">⏰ You have 72 hours to pay. After that:</p>
+                    <p style="margin: 20px 0;">1. Ransom DOUBLES to $1,000,000<br>2. Patient data will be PUBLISHED on the dark web<br>3. Decryption keys will be DESTROYED</p>
+                    <p style="margin: 20px 0; font-size: 0.9em;">Contact us via TOR: darkvault7encrypted.onion</p>
+                    <p style="margin-top: 30px; font-size: 0.8em;">DO NOT contact law enforcement or cybersecurity firms. We are monitoring your network.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Artifact 3: Attack Statistics Dashboard</h2>
+            <div class="artifact">
+                <h3 style="color: #00ff41; text-align: center; margin-bottom: 20px;">DarkVault Operation Metrics</h3>
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-number">5,247</div>
+                        <div>Files Encrypted</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">18</div>
+                        <div>Servers Compromised</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">5,000+</div>
+                        <div>Records Exfiltrated</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">72h</div>
+                        <div>Payment Deadline</div>
+                    </div>
+                </div>
+                <div style="margin-top: 30px; padding: 20px; background: rgba(0,0,0,0.5); border: 1px solid #ff0000;">
+                    <h4 style="color: #ff0000; margin-bottom: 15px;">Exfiltrated Data Sample:</h4>
+                    <code style="display: block; color: #00ff41; font-size: 0.9em;">
+                        Patient_Records_DB_MediCare.sql (2.3 GB) - EXTRACTED<br>
+                        Financial_Billing_2024.xlsx (487 MB) - EXTRACTED<br>
+                        Employee_SSN_List.csv (12 MB) - EXTRACTED<br>
+                        Insurance_Claims_Archive.zip (1.8 GB) - EXTRACTED<br>
+                        Medical_Imaging_Backup/ (15.7 GB) - EXTRACTED
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>⏱️ Attack Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Phase 1: RECONNAISSANCE (Days 1-7)</h4>
+                        <p><strong>Actions:</strong> Identified target hospital with outdated systems. Scraped employee emails from LinkedIn and hospital website. Researched IT infrastructure and security posture.</p>
+                        <p><strong>Tools:</strong> OSINT gathering, social engineering, network scanning</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Phase 2: DELIVERY / INITIAL ACCESS (Day 8)</h4>
+                        <p><strong>Actions:</strong> Sent spear-phishing emails to 37 billing department employees disguised as security updates. 3 employees clicked malicious link and entered credentials.</p>
+                        <p><strong>Tools:</strong> Phishing kit, credential harvester, fake login portal</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Phase 3: LATERAL MOVEMENT (Days 9-14)</h4>
+                        <p><strong>Actions:</strong> Used stolen credentials to access internal network. Escalated privileges using unpatched vulnerability. Moved laterally across 18 servers. Disabled backups and security tools.</p>
+                        <p><strong>Tools:</strong> Mimikatz, privilege escalation exploits, remote access trojans</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Phase 4: DATA EXFILTRATION (Days 15-20)</h4>
+                        <p><strong>Actions:</strong> Exfiltrated 5,000+ patient records, financial data, and sensitive documents to offshore servers. Total data stolen: 20.2 GB compressed.</p>
+                        <p><strong>Tools:</strong> Custom exfiltration scripts, encrypted channels, TOR network</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Phase 5: ENCRYPTION & IMPACT (Day 21)</h4>
+                        <p><strong>Actions:</strong> Deployed ransomware across all compromised systems at 2:00 AM. Encrypted 5,247 critical files. Left ransom notes on every desktop. Sent extortion email to CEO.</p>
+                        <p><strong>Impact:</strong> Complete operational shutdown, patient care disrupted, emergency diversion activated, $2M+ estimated losses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section defenses">
+            <h2>🛡️ Defender's Countermeasures</h2>
+            <ul class="defense-list">
+                <li>
+                    <strong>1. Security Awareness Training</strong>
+                    Conduct regular phishing simulation exercises and train all employees to recognize social engineering attacks. Implement mandatory cybersecurity training quarterly with focus on email threats.
+                </li>
+                <li>
+                    <strong>2. Multi-Factor Authentication (MFA)</strong>
+                    Enforce MFA on all accounts, especially for privileged users and remote access. Even if credentials are stolen, attackers cannot access systems without the second factor.
+                </li>
+                <li>
+                    <strong>3. Backup & Recovery Strategy</strong>
+                    Maintain offline, immutable backups using the 3-2-1 rule (3 copies, 2 media types, 1 offsite). Test restoration procedures monthly to ensure rapid recovery without paying ransom.
+                </li>
+                <li>
+                    <strong>4. Network Segmentation</strong>
+                    Segment critical systems and patient data networks. Implement zero-trust architecture to prevent lateral movement. Use VLANs and firewalls to isolate sensitive systems.
+                </li>
+                <li>
+                    <strong>5. Patch Management & EDR</strong>
+                    Deploy automated patch management for all systems. Implement Endpoint Detection and Response (EDR) solutions with behavioral analysis to detect ransomware before encryption occurs. Monitor for suspicious file access patterns and privilege escalation attempts.
+                </li>
+            </ul>
+        </div>
+
+        
+    </div>
+</body>
+</html>
